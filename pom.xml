@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.hemanthsridhar</groupId>
+    <artifactId>mc-sync-bintray</artifactId>
+    <version>1.2.4</version>
+    <packaging>jar</packaging>
+
+    <name>mc-sync-bintray</name>
+    <description>A demo for deployment to the Central Repository via bintray</description>
+    <url>http://github.com/hemanthsridhar</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Hemanth</name>
+            <email>hemanthb@jfrog.com</email>
+            <organization>Hemanth technologies inc.</organization>
+            <organizationUrl>http://www.learntestaut.com</organizationUrl>
+        </developer>
+    </developers>
+    <contributors>
+
+        <contributor>
+            <name>Utkarsh Tripati</name>
+            <email>utkarsh@jfrog.com</email>
+            <organization>Utkarsh technologies inc.</organization>
+            <organizationUrl>http://www.utkarsh.com</organizationUrl>
+        </contributor>
+
+        <contributor>
+            <name>Rosmi C</name>
+            <email>rosmic@jfrog.com</email>
+            <organization>Rosmi technologies inc.</organization>
+            <organizationUrl>http://www.Rosmi.com</organizationUrl>
+        </contributor>
+
+    </contributors>
+    <scm>
+        <connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
+        <developerConnection>scm:git:ssh://github.com:simpligility/ossrh-demo.git</developerConnection>
+        <url>http://github.com/simpligility/ossrh-demo/tree/master</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-hemanthsridhar-testaut-frameworks</id>
+            <name>hemanthsridhar-testaut-frameworks</name>
+            <url>https://api.bintray.com/maven/hemanthsridhar/testaut-frameworks/maven-sync-test/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
