@@ -4,7 +4,7 @@
 
     <groupId>com.github.hemanthsridhar</groupId>
     <artifactId>mc-sync-bintray</artifactId>
-    <version>1.2.4</version>
+    <version>1.2.7</version>
     <packaging>jar</packaging>
 
     <name>mc-sync-bintray</name>
@@ -51,7 +51,7 @@
         <repository>
             <id>bintray-hemanthsridhar-testaut-frameworks</id>
             <name>hemanthsridhar-testaut-frameworks</name>
-            <url>https://api.bintray.com/maven/hemanthsridhar/testaut-frameworks/maven-sync-test/;publish=1</url>
+            <url>https://api.bintray.com/maven/${bintraySubject}/${bintrayRepo}/${bintrayPkg}/;publish=1</url>
         </repository>
     </distributionManagement>
 
